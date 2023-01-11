@@ -53,7 +53,7 @@ footer {
 #board div {
     width: 25px;
     height: 25px;
-    /* background-color: black; */
+    background-color: black;
 }
 
 #board div:hover {
