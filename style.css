@@ -36,6 +36,16 @@ footer {
 .left-contents, .right-contents {
     flex: 1;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-contents form {
+    display: flex;
+    flex-direction: column;
+    accent-color: #E01E12;
 }
 
 #board {
@@ -51,9 +61,6 @@ footer {
 }
 
 #board div {
-    width: 25px;
-    height: 25px;
-    background-color: black;
 }
 
 #board div:hover {
