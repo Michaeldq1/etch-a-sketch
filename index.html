@@ -9,7 +9,10 @@
         <header>Etch-a-Sketch</header>
         <div class="main-container">
             <div class="left-contents">
-                <button class="boxes">Number of boxes</button>
+                <form method="get">
+                    <label for="boxes">Number of Boxes:</label>
+                    <input type="range" id="range-slider" name="boxes" min="5" max="30">
+                  </form>
             </div>
             <div id="board"></div>
             <div class="right-contents"></div>
