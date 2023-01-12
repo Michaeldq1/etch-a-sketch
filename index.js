@@ -1,19 +1,24 @@
 const board = document.getElementById('board');
-const rangeSlider = document.querySelector('.slider');
+const boxSizeSlider = document.querySelector('.slider');
 const circleOption = document.getElementById('circle');
 const squareOption = document.getElementById('square');
-const grid = document.getElementById('grid');
+const colorModeButton = document.getElementById('color-mode');
+const colorPicker = document.getElementById('color-picker');
 
-window.addEventListener('load', generateBoxes);
+window.addEventListener('DOMContentLoaded', generateBoxes);
 
-rangeSlider.addEventListener('change', generateBoxes);
+boxSizeSlider.addEventListener('change', generateBoxes);
 
 squareOption.addEventListener('click', generateBoxes);
 
 circleOption.addEventListener('click', changeShape);
 
+colorModeButton.addEventListener('click', enableColorMode);
+
+colorPicker.addEventListener('change', changeColor);
+
 function generateBoxes() {
-    let numberOfBoxes = rangeSlider.value;
+    let numberOfBoxes = boxSizeSlider.value;
     board.textContent = '';
 
     for (let i = 0; i < (numberOfBoxes * numberOfBoxes); i++) {
@@ -27,8 +32,22 @@ function generateBoxes() {
 
 function changeShape(){
     let boxes = document.querySelectorAll('#board div');
-    Array.from(boxes);
     for (const box of boxes) {
         box.classList.toggle('circles', circleOption.checked);
+    }
+}
+
+function enableColorMode() {
+
+}
+
+function changeColor() {
+    let newColor = colorPicker.value;
+    let inputForms = document.querySelectorAll('input');
+
+    board.style.border = `25px solid ${newColor}`;
+    
+    for (const form of inputForms) {
+        form.style.accentColor = newColor;
     }
 }
