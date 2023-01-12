@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 boxSizeSlider.addEventListener('change', generateBoxes);
 
-squareOption.addEventListener('click', generateBoxes);
+squareOption.addEventListener('click', changeShape);
 
 circleOption.addEventListener('click', changeShape);
 
@@ -47,9 +47,14 @@ function generateBoxes() {
 
 function changeShape(){
     let boxes = document.querySelectorAll('#board div');
-    for (const box of boxes) {
-        box.classList.toggle('circles', circleOption.checked);
-    }
+    
+    boxes.forEach((element) => {
+        if (circleOption.checked) {
+            element.style.borderRadius = '50%';
+        } else if (squareOption.checked) {
+            element.style.borderRadius = '0%';
+        }
+    })
 }
 
 function enableColorMode() {
