@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lan="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Etch-a-Sketch</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>Etch-a-Sketch</header>
-        <div class="main-container">
-            <div class="left-contents">
-                <form>
-                    <fieldset>
-                        <legend>Choose Shape:</legend>
-                        <label class="choice" for="square-choice">Square</label>
+<head>
+    <meta charset="UTF-8">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Etch-a-Sketch</header>
+    <div class="main-container">
+        <div class="left-contents">
+            <div id="choose-shape">
+                <legend>Choose Shape:</legend>
+                    <div>
+                        <label class="shape-choice">Square</label>
                         <input type="radio" name="shape-choice" id="square" checked="true"/>
-                        <label class="choice" for="circle-choice">Circle</label>
+                        <label class="shape-choice">Circle</label>
                         <input type="radio" name="shape-choice" id="circle" />
-                    </fieldset>
-                </form>
-                <button>Color Mode</button>
-                <button>Rainbow Mode</button>
-                <button>Eraser</button>
-                <button>Clear</button>
-                <form method="get">
-                    <label for="boxes">Number of Boxes:</label>
-                    <input class="slider" type="range" id="range-slider" name="boxes" min="5" max="30">
-                  </form>
+                    </div>
             </div>
-            <div id="board"></div>
-            <div class="right-contents"></div>
+            <div id="choose-color">
+                <label for="color-picker">Color Theme:</label>
+                <input type="color" value="#E01E12" id="color-picker">
+            </div>
+            <button id="color-mode">Color Mode</button>
+            <button id="rainbow-mode">Rainbow Mode</button>
+            <button id="eraser">Eraser</button>
+            <button id="clear">Clear</button>
+            <div id="size-slider">
+                <label for="boxes">Number of Boxes:</label>
+                <input class="slider" type="range" id="range-slider" name="boxes" min="5" max="30">
+            </div>
         </div>
-        <footer></footer>
-        <script src="index.js"></script>
-    </body>
+        <div id="board"></div>
+        <div class="right-contents"></div>
+    </div>
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
 </html>
