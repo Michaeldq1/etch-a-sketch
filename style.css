@@ -25,6 +25,12 @@ footer {
 
 }
 
+button {
+    width: 120px;
+    font-size: 16px;
+    padding: 4px;
+}
+
 .main-container {
     flex: 6;
     display: flex;
@@ -40,12 +46,23 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-weight: bolder;
+    gap: 30px;
+}
+
+fieldset {
+    border: 0;
+}
+
+.choice {
+    font-weight: 500;
 }
 
 .left-contents form {
     display: flex;
     flex-direction: column;
     accent-color: #E01E12;
+    text-align: center;
 }
 
 #board {
@@ -61,6 +78,10 @@ footer {
 }
 
 #board div {
+}
+
+.circles {
+    border-radius: 50%;
 }
 
 #board div:hover {
