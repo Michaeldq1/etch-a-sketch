@@ -2,6 +2,7 @@ const board = document.getElementById('board');
 const rangeSlider = document.querySelector('.slider');
 const circleOption = document.getElementById('circle');
 const squareOption = document.getElementById('square');
+const grid = document.getElementById('grid');
 
 window.addEventListener('load', generateBoxes);
 
@@ -18,7 +19,8 @@ function generateBoxes() {
     for (let i = 0; i < (numberOfBoxes * numberOfBoxes); i++) {
         let box = document.createElement('div');
         box.style.width = `${board.clientWidth / numberOfBoxes}px`;
-        box.style.height = `${board.clientHeight / numberOfBoxes}px`;       
+        box.style.height = `${board.clientHeight / numberOfBoxes}px`;
+        changeShape();       
         board.appendChild(box);
     }
 }
