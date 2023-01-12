@@ -1,5 +1,5 @@
 * {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -21,16 +21,6 @@ header {
     font-weight: bolder;
 }
 
-footer {
-
-}
-
-button {
-    width: 120px;
-    font-size: 16px;
-    padding: 4px;
-}
-
 .main-container {
     flex: 6;
     display: flex;
@@ -47,23 +37,41 @@ button {
     justify-content: center;
     align-items: center;
     font-weight: bolder;
-    gap: 30px;
+    gap: 25px;
 }
 
-fieldset {
-    border: 0;
+button {
+    width: 120px;
+    font-size: 16px;
+    padding: 4px;
 }
 
-.choice {
+.shape-choice {
     font-weight: 500;
 }
 
-.left-contents form {
+#size-slider, #choose-color, #choose-shape {
     display: flex;
     flex-direction: column;
+    align-items: center;
     accent-color: #E01E12;
     text-align: center;
 }
+
+legend, label {
+    margin-bottom: 10px;
+}
+
+[type='color'] {
+    -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0;
+  width: 90px;
+  height: 30px;
+  border: none;
+}
+
 
 #board {
     display: flex;
@@ -74,10 +82,7 @@ fieldset {
     border: 25px solid #E01E12;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    background-color: blanchedalmond;
-}
-
-#board div {
+    background-color: #F9F9F9;
 }
 
 .circles {
