@@ -90,5 +90,9 @@ legend, label {
 }
 
 #board div:hover {
-    background-color: blue;
+    
+}
+
+.test {
+    background-color: red;
 }
