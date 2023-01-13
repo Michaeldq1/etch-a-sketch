@@ -14,6 +14,7 @@ header, footer {
     display: flex;
     flex: 1;
     justify-content: center;
+    align-items: center;
 }
 
 header {
@@ -26,7 +27,6 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: nowrap;
 }
 
 .left-contents, .right-contents {
@@ -87,12 +87,4 @@ legend, label {
 
 .circles {
     border-radius: 50%;
-}
-
-#board div:hover {
-    
-}
-
-.test {
-    background-color: red;
 }
