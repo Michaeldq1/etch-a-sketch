@@ -9,6 +9,7 @@ const rainbowModeButton = document.getElementById('rainbow-mode');
 const eraserButton = document.getElementById('eraser');
 const clearButton = document.getElementById('clear');
 const boxSizeSlider = document.querySelector('.slider');
+const toggleThemeButton = document.querySelector('.theme-toggle');
 
 let colorMode = false;
 let rainbowMode = false;
@@ -40,3 +41,5 @@ boxSizeSlider.addEventListener('change', () => {
     generateBoxes();
     changeShape();
 });
+
+toggleThemeButton.addEventListener('click', setTheme);

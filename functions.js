@@ -28,7 +28,7 @@ function changeShape(){
 }
 
 function enableColorMode() {
-    colorModeButton.style.border = '2px solid black';
+    colorModeButton.style.border = `2px solid black`;
     rainbowModeButton.style.border = '';
     eraserButton.style.border = '';
     colorMode = true;
@@ -39,7 +39,7 @@ function enableColorMode() {
 
 function enableRainbowMode() {
     colorModeButton.style.border = '';
-    rainbowModeButton.style.border = '2px solid black';
+    rainbowModeButton.style.border = `2px solid black`;
     eraserButton.style.border = '';
     colorMode = false;
     rainbowMode = true;
@@ -50,7 +50,7 @@ function enableRainbowMode() {
 function enableEraser() {
     colorModeButton.style.border = '';
     rainbowModeButton.style.border = '';
-    eraserButton.style.border = '2px solid black';
+    eraserButton.style.border = `2px solid black`;
     colorMode = false;
     rainbowMode = false;
     eraserMode = true;
@@ -89,3 +89,14 @@ function changeColor() {
         form.style.accentColor = newColor;
     }
 }
+
+function setTheme() {
+    const root = document.documentElement;
+    const newTheme = root.className === 'dark' ? 'light' : 'dark';
+    root.className = newTheme;
+    
+    document.querySelector('.theme-name').textContent = 
+        newTheme === 'dark' ? 'Dark Mode' : 'Light Mode';
+  }
+  
+  document.querySelector('.theme-toggle').addEventListener('click', setTheme)
